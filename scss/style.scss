@@ -1,0 +1,187 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background: #c2c2d6;
+  font-family: digital;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+%box {
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  background: #4d4d4d;
+  border: 0px solid red;
+}
+
+#app {
+  display: inline-block;
+}
+
+.author {
+  font-family: Tahoma;
+  margin-top: 20px;
+  color: #000000;
+  a {
+  text-decoration: none;
+  color: #00264d;
+  
+  &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.box:hover {
+  cursor: pointer;
+  color: #000000;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+}
+
+.expression {
+  grid-area: expression;
+  /*
+  overflow: hidden;
+  white-space: nowrap;
+  direction: ltr;
+  */
+  overflow-wrap: break-word;
+  text-align: right;
+  padding-bottom: 5px;
+  color: orange;
+  min-height: 18px;
+  font-weight: normal;
+  border: 0px solid red;
+}
+
+.display {
+  grid-area: display;
+  text-align: right;
+  font-size: 20px;
+  padding-bottom: 5px;
+  height: 20px;
+  border: 0px solid red;
+}
+
+.clear {
+  grid-area: clear;
+  @extend %box;
+  background: rgb(172, 57, 57);
+}
+
+.divide {
+  grid-area: divide;
+  @extend %box;
+  background: rgb(102, 102, 102);
+}
+
+.multiply {
+  grid-area: multiply;
+  @extend %box;
+  background: rgb(102, 102, 102);
+}
+
+.subtract {
+  grid-area: subtract;
+  @extend %box;
+  background: rgb(102, 102, 102);
+}
+
+.add {
+  grid-area: add;
+  @extend %box;
+  background: rgb(102, 102, 102);
+}
+
+.equals {
+  grid-area: equals;
+  @extend %box;
+  height: 131px;
+  line-height: 131px;
+  background: rgb(0, 68, 102);
+}
+
+.decimal {
+  grid-area: decimal;
+  @extend %box;
+}
+
+.zero {
+  grid-area: zero;
+  @extend %box;
+}
+
+.one {
+  grid-area: one;
+  @extend %box;
+}
+
+.two {
+  grid-area: two;
+  @extend %box;
+}
+
+.three {
+  grid-area: three;
+  @extend %box;
+}
+
+.four {
+  grid-area: four;
+  @extend %box;
+}
+
+.five {
+  grid-area: five;
+  @extend %box;
+}
+
+.six {
+  grid-area: six;
+  @extend %box;
+}
+
+.seven {
+  grid-area: seven;
+  @extend %box;
+}
+
+.eight {
+  grid-area: eight;
+  @extend %box;
+}
+
+.nine {
+  grid-area: nine;
+  @extend %box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "expression expression expression expression"
+    "display display display display"
+    "clear clear divide multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+  grid-gap: 1px;
+  background: black;
+  border: 2px solid #47476b;
+  padding: 5px;
+}
+
